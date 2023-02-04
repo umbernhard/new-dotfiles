@@ -2,6 +2,7 @@
 
 {
   imports = [ ./kernel/kernel.nix ./systemd-boot/systemd-boot.nix ];
+  boot.bootspec.enable = true;
 
   boot.extraModprobeConfig = ''
 	options iwlwifi 11n_disable=1 swcrypto=0 bt_coex_active=0 power_save=0

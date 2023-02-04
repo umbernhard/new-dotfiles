@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./libvirt.nix ./xserver ];
+  imports = [ ./libvirt.nix ./xserver ./fprint.nix ];
 }

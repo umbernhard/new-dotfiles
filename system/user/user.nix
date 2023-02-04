@@ -11,5 +11,5 @@
     };
     defaultUserShell = pkgs.zsh;
   };
-  environment.systemPackages = [pkgs.git pkgs.home-manager pkgs.fprint];
+  environment.systemPackages = [pkgs.git pkgs.home-manager pkgs.fprintd];
 }

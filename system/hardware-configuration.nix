@@ -9,7 +9,7 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "uas" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "tpm_tis" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.kernelParams = [ "module_blacklist=hid_sensor_hub" ];
   boot.extraModulePackages = [ ];

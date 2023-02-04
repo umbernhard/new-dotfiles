@@ -7,7 +7,7 @@
     # Enable the GNOME Desktop Environment.
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
-    extraGSettingsOverrides = ''
+    desktopManager.gnome.extraGSettingsOverrides = ''
       [org/gnome/desktop/wm/keybindings]
       maximize=['<Super>k']
       minimize=@as []
@@ -28,9 +28,6 @@
 
       [org/gnome/settings-daemon/plugins/media-keys]
       screensaver=['<Shift><Control>Escape']
-
-
-
     '';
   };
 }

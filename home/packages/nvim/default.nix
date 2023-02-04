@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
-  home.packages = [ nixpkgs-unstable.neovim ];
+  home.packages = with pkgs; [ neovim ];
   programs.neovim.extraConfig = lib.fileContents ./init.lua;
 }

@@ -18,8 +18,10 @@
  
     homeConfigurations = {
       "matt" = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        pkgs-unstable = nixpkgs-unstable.legacyPackages."x86_64-linux";
+        pkgs = import nixpkgs-unstable {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
         modules = [
           ./home
         ];

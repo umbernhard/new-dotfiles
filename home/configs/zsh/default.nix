@@ -10,5 +10,9 @@
       plugins = [ "git" "python" "man" ];
       theme = "robbyrussell";
     };
+
+    initExtra = ''
+      ssh-add ~/.ssh/github-key
+    '';
   };
 }

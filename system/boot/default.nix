@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./kernel/kernel.nix ./systemd-boot/systemd-boot.nix ];
+  imports = [ ./kernel/kernel.nix ./lanzaboote/lanzaboote.nix ];
   boot.bootspec.enable = true;
 
   boot.extraModprobeConfig = ''

@@ -7,5 +7,6 @@
     virt-manager
     vlc
     _1password-gui
+    fprintd
   ];
 }

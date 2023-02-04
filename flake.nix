@@ -8,9 +8,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs: {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-
+  outputs = inputs@{ nixpkgs, home-manager, ... }: {
     nixConfigurations = {
       Nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

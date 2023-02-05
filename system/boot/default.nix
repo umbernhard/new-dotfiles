@@ -10,6 +10,8 @@
 	options iwlwifi d0i3_disable=1 
 	options iwlwifi uapsd_disable=1 
 	options iwlwifi lar_disable=1
+
+	options i915 mitigations=off
   '';
 	
   boot.supportedFilesystems = [ "btrfs" ];

@@ -6,9 +6,10 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote";
+    neovim.url = "github:Gako358/neovim";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, lanzaboote, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, lanzaboote, neovim, ... }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -27,6 +28,7 @@
         };
         modules = [
           ./home
+          neovim
         ];
       };
     };

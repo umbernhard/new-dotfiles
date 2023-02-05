@@ -436,7 +436,7 @@
     "naersk": {
       "inputs": {
         "nixpkgs": [
-          "neovim",
+          "neovimMX",
           "rnix-lsp",
           "nixpkgs"
         ]
@@ -457,6 +457,31 @@
     },
     "neovim": {
       "inputs": {
+        "flake-utils": "flake-utils_3",
+        "nixpkgs": [
+          "neovimMX",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "contrib",
+        "lastModified": 1674899990,
+        "narHash": "sha256-T4hX4Jm8cM7BF69ZlST4bAd2YqtVvS/4AJDvr1QehI4=",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "dd086292c727e5ae1640e114a5d08feef4816e4e",
+        "type": "github"
+      },
+      "original": {
+        "dir": "contrib",
+        "owner": "neovim",
+        "repo": "neovim",
+        "rev": "dd086292c727e5ae1640e114a5d08feef4816e4e",
+        "type": "github"
+      }
+    },
+    "neovimMX": {
+      "inputs": {
         "borealis": "borealis",
         "cmp-buffer": "cmp-buffer",
         "cmp-luasnip": "cmp-luasnip",
@@ -472,7 +497,7 @@
         "lightspeed": "lightspeed",
         "lualine": "lualine",
         "luasnip": "luasnip",
-        "neovim": "neovim_2",
+        "neovim": "neovim",
         "nil": "nil",
         "nixpkgs": "nixpkgs_2",
         "noice": "noice",
@@ -513,39 +538,14 @@
         "type": "github"
       }
     },
-    "neovim_2": {
-      "inputs": {
-        "flake-utils": "flake-utils_3",
-        "nixpkgs": [
-          "neovim",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "contrib",
-        "lastModified": 1674899990,
-        "narHash": "sha256-T4hX4Jm8cM7BF69ZlST4bAd2YqtVvS/4AJDvr1QehI4=",
-        "owner": "neovim",
-        "repo": "neovim",
-        "rev": "dd086292c727e5ae1640e114a5d08feef4816e4e",
-        "type": "github"
-      },
-      "original": {
-        "dir": "contrib",
-        "owner": "neovim",
-        "repo": "neovim",
-        "rev": "dd086292c727e5ae1640e114a5d08feef4816e4e",
-        "type": "github"
-      }
-    },
     "nil": {
       "inputs": {
         "flake-utils": [
-          "neovim",
+          "neovimMX",
           "flake-utils"
         ],
         "nixpkgs": [
-          "neovim",
+          "neovimMX",
           "nixpkgs"
         ],
         "rust-overlay": "rust-overlay_2"
@@ -970,7 +970,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
-        "neovim": "neovim",
+        "neovimMX": "neovimMX",
         "nixpkgs": "nixpkgs_4"
       }
     },
@@ -1002,12 +1002,12 @@
     "rust-overlay_2": {
       "inputs": {
         "flake-utils": [
-          "neovim",
+          "neovimMX",
           "nil",
           "flake-utils"
         ],
         "nixpkgs": [
-          "neovim",
+          "neovimMX",
           "nil",
           "nixpkgs"
         ]

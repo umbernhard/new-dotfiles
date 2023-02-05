@@ -15,5 +15,6 @@
     wget
     zip
     htop
+    neovim
   ];
 }

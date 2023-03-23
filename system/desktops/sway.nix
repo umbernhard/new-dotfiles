@@ -69,6 +69,8 @@ in
     gsettings-desktop-schemas
     libadwaita
   ];
+
+  programs.light.enable = true;
   
   # xdg-desktop-portal works by exposing a series of D-Bus interfaces
   # known as portals under a well-known name

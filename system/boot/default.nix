@@ -10,8 +10,6 @@
 	options iwlwifi d0i3_disable=1 
 	options iwlwifi uapsd_disable=1 
 	options iwlwifi lar_disable=1
-
-	options i915 mitigations=off
   '';
 	
   boot.supportedFilesystems = [ "btrfs" ];
@@ -29,6 +27,7 @@
     "rd.udev.log_level=3"
     "udev.log_priority=3"
     "boot.shell_on_fail"
+    "i915.enable_psr=0"
   ];
   boot.consoleLogLevel = 0;
   boot.initrd.verbose = false;

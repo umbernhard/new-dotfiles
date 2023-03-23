@@ -8,52 +8,51 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "uas" "sd_mod" ];
-  boot.initrd.kernelModules = [ "tpm_tis" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.kernelParams = [ "module_blacklist=hid_sensor_hub" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/mapper/cryptdev";
+    { device = "/dev/disk/by-uuid/126b6684-4cf0-44e0-bc7c-81f09aae632a";
       fsType = "btrfs";
-      options = [ "subvol=@" "compress=zstd" "noatime" ];
+      options = [ "subvol=root" "compress=zstd" "noatime" ];
     };
 
-  boot.initrd.luks.devices."cryptdev".device = "/dev/disk/by-uuid/baa611dc-ba2c-40ed-bef8-04729e2ca9a6";
+  boot.initrd.luks.devices."crypt".device = "/dev/disk/by-uuid/632f45b7-f5a6-4017-8f3c-2fbcf24d1871";
 
   fileSystems."/home" =
-    { device = "/dev/mapper/cryptdev";
+    { device = "/dev/disk/by-uuid/126b6684-4cf0-44e0-bc7c-81f09aae632a";
       fsType = "btrfs";
-      options = [ "subvol=@home" "compress=zstd" "noatime" ];
+      options = [ "subvol=home" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/mapper/cryptdev";
+    { device = "/dev/disk/by-uuid/126b6684-4cf0-44e0-bc7c-81f09aae632a";
       fsType = "btrfs";
-      options = [ "subvol=@nix" "compress=zstd" "noatime" ];
+      options = [ "subvol=nix" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/persist" =
-    { device = "/dev/mapper/cryptdev";
+    { device = "/dev/disk/by-uuid/126b6684-4cf0-44e0-bc7c-81f09aae632a";
       fsType = "btrfs";
-      options = [ "subvol=@persist" "compress=zstd" "noatime" ];
+      options = [ "subvol=persist" "compress=zstd" "noatime" ];
     };
 
   fileSystems."/var/log" =
-    { device = "/dev/mapper/cryptdev";
+    { device = "/dev/disk/by-uuid/126b6684-4cf0-44e0-bc7c-81f09aae632a";
       fsType = "btrfs";
-      options = [ "subvol=@log" "compress=zstd" "noatime" ];
+      options = [ "subvol=log" "compress=zstd" "noatime" ];
       neededForBoot = true;
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/F332-5E15";
+    { device = "/dev/disk/by-uuid/6BF2-E8C4";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/6d8ee20d-3e1e-4a88-a93c-85d37cb3bfdd"; }
+    [ { device = "/dev/disk/by-uuid/85135016-a3f4-4e6b-acee-c174eb91b94e"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -66,4 +65,5 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
 }

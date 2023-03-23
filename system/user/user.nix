@@ -11,5 +11,5 @@
     };
     defaultUserShell = pkgs.zsh;
   };
-  environment.systemPackages = [ pkgs.git pkgs.home-manager pkgs.fprintd pkgs.chrome-gnome-shell pkgs.sbctl pkgs.efitools ];
+  environment.systemPackages = [ pkgs.git pkgs.home-manager pkgs.fprintd pkgs.chrome-gnome-shell pkgs.sbctl pkgs.efitools pkgs.powertop ];
 }

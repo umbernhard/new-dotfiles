@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [ ./pipewire.nix ];
 #  services = {
 #    xserver = {
 #      videoDrivers = [ "intel" ];

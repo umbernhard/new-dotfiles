@@ -10,6 +10,7 @@
         noto-fonts-emoji
         noto-fonts
         nerdfonts
+        font-awesome
       ];
   };
 }

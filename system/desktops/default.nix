@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }:
 
 {
-  imports = [ ./gnome.nix ];
+  imports = [ ./sway.nix ];
 }

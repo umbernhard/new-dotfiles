@@ -3,7 +3,7 @@
 {
   users = {
     extraUsers.matt = {
-      extraGroups = [ "wheel" "audio" "video" "libvirtd" "networkmanager" ];
+      extraGroups = [ "wheel" "audio" "video" "libvirtd" "networkmanager" "input" ];
       description = "Matt Bernhard";
       useDefaultShell = true;
       isNormalUser = true;

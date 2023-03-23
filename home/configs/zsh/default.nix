@@ -7,7 +7,7 @@
 
     oh-my-zsh = { 
       enable = true;
-      plugins = [ "git" "python" "man" ];
+      plugins = [ "git" "python" "man" "ssh-agent" "gpg-agent" ];
       theme = "robbyrussell";
     };
 

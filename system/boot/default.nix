@@ -28,6 +28,7 @@
     "udev.log_priority=3"
     "boot.shell_on_fail"
     "i915.enable_psr=0"
+    "module_blacklist=hid_sensor_hub"
   ];
   boot.consoleLogLevel = 0;
   boot.initrd.verbose = false;

@@ -9,5 +9,6 @@
     vlc
     _1password-gui
     signal-desktop
+    evince
   ];
 }

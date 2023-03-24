@@ -54,7 +54,8 @@ in
     swaylock
     waybar
     swayidle
-    grim # screenshot functionality
+    grim
+    sway-contrib.grimshot
     slurp # screenshot functionality
     wl-clipboard 
     fuzzel 

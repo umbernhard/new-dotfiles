@@ -10,6 +10,8 @@
         noto-fonts-emoji
         noto-fonts
         nerdfonts
+        unifont
+        unifont_upper
         font-awesome
       ];
   };

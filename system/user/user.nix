@@ -12,15 +12,5 @@
     defaultUserShell = pkgs.zsh;
   };
 
-  environment.systemPackages = with pkgs;
-  [
-    git
-    home-manager
-    fprintd
-    chrome-gnome-shell
-    sbctl
-    efitools
-    powertop
-    vagrant
-  ];
+  environment.systemPackages = [ pkgs.git pkgs.home-manager pkgs.fprintd pkgs.chrome-gnome-shell pkgs.sbctl pkgs.efitools pkgs.powertop pkgs.vagrant ];
 }
